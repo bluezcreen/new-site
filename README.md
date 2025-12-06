@@ -12,7 +12,7 @@ apt install git
 ```
 (or any package manager you use.)
 ```
-git clone https://bluezcreen.github.io
+git clone https://github.com/bluezcreen/bluezcreen.github.io
 ```
 
 2. Edit the contents as you want in a text editor/IDE.
@@ -22,3 +22,6 @@ apt install python
 cd path/to/file.html
 python3 -m http.server 8000
 ```
+---
+# License
+The GNU General Public License Version 3 applies to the contents of this repository.
