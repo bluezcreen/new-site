@@ -12,17 +12,27 @@ class Panel extends HTMLElement {
   }
 }
 
+class Pbar extends HTMLElement {
+  connectedCallback() {
+    const contentPB = this.innerHTML;
+
+    this.innerHTML = `
+        <nav class="wbars">${contentPB}</nav>
+    `;
+  }
+}
+
 class Navbar extends HTMLElement {
   connectedCallback() {
     this.classList.add("navb")
 
     this.innerHTML = `
       <div class="dr1">
-        <button class="drb1">⟡</button>
+        <button class="drb1">☰</button>
         <div class="drc1">
           <a href="/references/">About This Site</a><br>
           <hr>
-          <a href="/#/">Home</a><br>
+          <a href="/home/">Home</a><br>
           <a href="/blog/">Thoughts</a><br>
           <a href="/stuff/">Box of Many Things</a><br>
           <a href="/tunes/">Music Player</a><br>
@@ -32,8 +42,8 @@ class Navbar extends HTMLElement {
           <span style="opacity: 0.5;">Themes (soon!)</span>
         </div>
       </div>
-
-      <span>bluezcreen.github.io</span>
+    
+    <span>bluezcreen.github.io</span>
     `;
   }
 }
@@ -55,14 +65,16 @@ class Footer extends HTMLElement {
     <div class="footer">
       <div>bluezcreen.github.io | 2025</div>
       <hr>
-      <div class="df">
+      <div class="badges">
+        <img src="../visuals/imgs/badge_githubio.png">
+        <img src="../visuals/imgs/badge_git.png">
         <img src="../visuals/imgs/badge_github.png">
-        <img src="../visuals/imgs/badge_intellect.png">
-        <div id="badgeapple">
-          <video autoplay muted loop>
-            <source src="../visuals/imgs/badge_apple.mp4" type="video/mp4">
-          </video>
-        </div>
+        <img src="../visuals/imgs/badge_apple.gif">
+    
+        <img src="../visuals/imgs/badge_neocities.png">
+        <img src="../visuals/imgs/badge_honeocities.png">
+        <img src="../visuals/imgs/badge_intellect.gif" style="width: 88px; height: 31px;">
+        <img src="https://adriansblinkiecollection.neocities.org/buttons/e21.gif">
       </div>
     </div>
   </main>
@@ -71,5 +83,6 @@ class Footer extends HTMLElement {
 }
 
 customElements.define("n-avbar", Navbar);
+customElements.define("p-bar", Pbar);
 customElements.define("f-ooter", Footer);
 customElements.define("p-anel", Panel);

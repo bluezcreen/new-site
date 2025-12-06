@@ -8,6 +8,12 @@
   <link rel="icon" type="image/x-icon" href="../visuals/imgs/favicon.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>homepage</title>
+  
+  <style>
+  p-anel .window { height: 100%; }
+  hr { margin: 15px 0px 15px 0px; }
+  }
+  </style>
 </head>
 <body>
   
@@ -17,13 +23,25 @@
   
   <main class="content"> <!--wrapper for content that needs margin-->
     
+    <!--the VERY HUMBLE noscript oneliner-->
+    <noscript><article class="window"><nav class="wbar">Oops!</nav><div class="wcontent df"><img src="../visuals/imgs/404.png" style="width: 80px; height: 80px;"><p>Your JavaScript is inactive.<br>Please turn it back on to load this page's elements.</p></div></article></noscript>
+    
     <p-anel title="What is this place?">
       <img src="../visuals/imgs/b_about.png" class="banner">
       <div class="wcontent">"A personal site of mine. Contains many miscellaneous stuff I decide to put in."</div>
     </p-anel>
     
-    <p-anel title="Where you can find me">
+    <section class="dtp">
+      
+    <p-anel title="Quick Stuff" class="dtc">
       <div class="wcontent">
+        <div class="scrollbox"><hr>
+         15.12.25 /<br>Refactoring is finished!<hr>
+         03.12.25 /<br>Plans of refactoring the site<hr>
+         29.11.25 /<br>67% of this site was made by a clanker.<hr>
+        </div>
+        <hr>
+        <h3 style="margin: 0;">Socials</h3><hr>
         <div class="even" style="font-size: 15px; color: var(--prim);">
         <span><a href="https://x.com/bluezcreen?s=09"><i class="fa-brands fa-twitter"></i> Twitter</a></span>
         <span><a href="https://m.youtube.com/channel/UCLZkiAjM041QTJiqf9Q_Vmw"><i class="fa-brands fa-youtube"></i> YouTube</a></span>
@@ -34,17 +52,19 @@
       </div>
     </p-anel>
     
-    <p-anel title="Say something">
-      <div style="outline: 2px solid var(--prim); margin: 5px;">
+    <p-anel title="Say something" class="dtc">
+      <div>
         <iframe src="https://www5.cbox.ws/box/?boxid=960072&boxtag=h5keA3" width="100%" height="300" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe></div>
     </p-anel>
+      
+    </section>
     
     <!--
     <p-anel title="About">
       <div class="wcontent">You may copy this site! (link for github template repo here)</div>
     </p-anel>-->
     
-    <f-ooter></f-ooter>
+    <f-ooter style="margin: 5px;"></f-ooter>
     
   </main>
   
