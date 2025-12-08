@@ -1,7 +1,9 @@
 ![banner](visuals/imgs/b_references.png)
 # <a href="bluezcreen.github.io">bluezcreen.github.io</a>
 ---
-#### A personal page of myself.
+#### A personal page of myself.  
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/bluezcreen/bluezcreen.github.io/main?style=for-the-badge)
+![made up version](https://img.shields.io/badge/ver.XII/25-blue?style=for-the-badge)
 ---
 # Usage
 You may use this repository's contents to build a site of your own.  

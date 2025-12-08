@@ -33,6 +33,7 @@ class Navbar extends HTMLElement {
           <a href="/references/">About This Site</a><br>
           <hr>
           <a href="/home/">Home</a><br>
+          <a href="/me/">Biography</a><br>
           <a href="/blog/">Thoughts</a><br>
           <a href="/stuff/">Box of Many Things</a><br>
           <a href="/tunes/">Music Player</a><br>
@@ -74,7 +75,7 @@ class Footer extends HTMLElement {
         <img src="../visuals/imgs/badge_neocities.png">
         <img src="../visuals/imgs/badge_honeocities.png">
         <img src="../visuals/imgs/badge_intellect.gif" style="width: 88px; height: 31px;">
-        <img src="https://adriansblinkiecollection.neocities.org/buttons/e21.gif">
+        <img src="../visuals/imgs/badge_html.png">
       </div>
     </div>
   </main>

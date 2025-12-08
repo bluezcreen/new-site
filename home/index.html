@@ -3,16 +3,23 @@
 <html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link type="text/css" rel="stylesheet" media="all" href="../style.css" id="theme" />
+  <link type="text/css" rel="stylesheet" media="all" href="../themer/style.css" id="theme" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="../visuals/imgs/favicon.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>homepage</title>
   
   <style>
   p-anel .window { height: 100%; }
   hr { margin: 15px 0px 15px 0px; }
   }
+  #socials {
+    font-size: 15px;
+    color: var(--prim);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
   </style>
 </head>
 <body>
@@ -42,12 +49,13 @@
         </div>
         <hr>
         <h3 style="margin: 0;">Socials</h3><hr>
-        <div class="even" style="font-size: 15px; color: var(--prim);">
-        <span><a href="https://x.com/bluezcreen?s=09"><i class="fa-brands fa-twitter"></i> Twitter</a></span>
-        <span><a href="https://m.youtube.com/channel/UCLZkiAjM041QTJiqf9Q_Vmw"><i class="fa-brands fa-youtube"></i> YouTube</a></span>
-        <span><a href="https://www.tiktok.com/@bluezcreen_?_r=1&_t=ZP-91FZekLYC7z"><i class="fa-brands fa-tiktok"></i> TikTok</a> </span>
-        <span><a href="https://bsky.app/profile/bluezcreen.bsky.social"><i class="fa-solid fa-earth-asia"></i> Bluesky</a></span>
-        <span><a href="https://www.last.fm/user/bluezcreen"><i class="fa-brands fa-lastfm"></i> last.fm</a><br></span>
+        <div id="socials">
+        <div><a href="https://x.com/bluezcreen?s=09"><i class="fa-brands fa-twitter"></i> Twitter</a></div>
+        <div><a href="https://m.youtube.com/channel/UCLZkiAjM041QTJiqf9Q_Vmw"><i class="fa-brands fa-youtube"></i> YouTube</a></div>
+        <div><a href="https://www.tiktok.com/@bluezcreen_?_r=1&_t=ZP-91FZekLYC7z"><i class="fa-brands fa-tiktok"></i> TikTok</a> </div>
+        <div><a href="https://bsky.app/profile/bluezcreen.bsky.social"><i class="fa-solid fa-earth-asia"></i> Bluesky</a></div>
+        <div><a href="https://www.last.fm/user/bluezcreen"><i class="fa-brands fa-lastfm"></i> last.fm</a></div>
+        <div><a href="https://github.com/bluezcreen"><i class="fa-brands fa-github"></i>Github</a></div>
         </div>
       </div>
     </p-anel>
