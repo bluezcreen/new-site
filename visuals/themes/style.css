@@ -59,7 +59,7 @@ a {
 
 /*custom elements*/
 .content {
-  padding: 70px 20px 20px 20px;
+  padding: 80px 25px 25px 25px;
 }
 
 p-anel {
@@ -311,7 +311,7 @@ n-avbar {
 }
 
 strong {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: "Chicago";
   font-weight: bold;
 }
