@@ -17,7 +17,7 @@ class Pbar extends HTMLElement {
     const contentPB = this.innerHTML;
 
     this.innerHTML = `
-        <nav class="wbars">${contentPB}</nav>
+        <nav class="sbar">${contentPB}</nav>
     `;
   }
 }

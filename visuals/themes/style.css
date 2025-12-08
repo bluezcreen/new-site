@@ -27,6 +27,13 @@
       gap: 20px;
   }
   .dtc { flex: 1; }
+  
+  .array { /*for the cards on the tunes page*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+  }
 }
 
 /*font*/
@@ -88,7 +95,7 @@ p-anel {
   justify-content: space-between;
 }
 
-.wbars {
+.sbar {
   font-family: var(--font1);
   background-color: var(--seco);
   outline: 2px solid var(--prim);
@@ -314,4 +321,10 @@ strong {
   font-size: 1rem;
   font-family: "Chicago";
   font-weight: bold;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
