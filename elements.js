@@ -28,25 +28,50 @@ class Navbar extends HTMLElement {
 
     this.innerHTML = `
       <div class="dr1">
-        <button class="drb1">☰</button>
+        <button class="drb1">⟡</button>
         <div class="drc1">
-          <a href="/references/">About This Site</a><br>
+          <a href="/references/"><i class="fa-solid fa-computer"></i> About This Site</a><br>
           <hr>
-          <a href="/home/">Home</a><br>
-          <a href="/me/">Biography</a><br>
-          <a href="/blog/">Thoughts</a><br>
-          <a href="/stuff/">Box of Many Things</a><br>
-          <a href="/tunes/">Music Player</a><br>
-    
+          <a href="/home/"><i class="fa-solid fa-house"></i> Homepage</a><br>
+          <a href="/me/"><i class="fa-solid fa-user"></i> Biography</a><br>
+          <a href="/blog/"><i class="fa-solid fa-comment"></i> Thoughts</a><br>
+          <a href="/stuff/"><i class="fa-solid fa-inbox"></i> Box of Many Things</a><br>
+          <a href="/tunes/"><i class="fa-solid fa-music"></i> Gramaphone</a><br>
+          <a href="https://www.nytimes.com/games/wordle/index.html"><i class="fa-solid fa-table-cells"></i> Wordle</a>
           <hr>
             
-          <span style="opacity: 0.5;">Themes (soon!)</span>
+          <span style="opacity: 0.5;"><i class="fa-solid fa-palette"></i> Themes (soon!)</span>
         </div>
       </div>
     
-    <span>bluezcreen.github.io</span>
+      <div style="display: flex; gap: 10px; margin-right: 10px;">
+        <span><i class="fa-solid fa-battery-three-quarters"></i></span>
+        <span><i class="fa-solid fa-signal"></i></span>
+        <span id="clock"></span>
+      </div>
     `;
+    
+    this.beginClock();
   }
+  
+  beginClock() {
+    const clock = this.querySelector("#clock");
+
+    const update = () => {
+      const now = new Date();
+      const hh = String(now.getHours()).padStart(2, "0");
+      const mm = String(now.getMinutes()).padStart(2, "0");
+      const ss = String(now.getSeconds()).padStart(2, "0");
+      clock.textContent = `${hh}:${mm}`;
+    };
+
+    update();
+    this._clockInterval = setInterval(update, 1000);
+  }
+
+  disconnectedCallback() {
+    clearInterval(this._clockInterval);
+    }
 }
 
 /*<div class="dr2">
@@ -63,24 +88,31 @@ class Footer extends HTMLElement {
     this.classList.add("badgeapple")
     
     this.innerHTML = `
-    <div class="footer">
+    <main class="footer">
       <div>bluezcreen.github.io | 2025</div>
       <hr>
       <div class="badges">
-        <img src="../visuals/imgs/badge_githubio.png">
+        <img src="../visuals/imgs/bluezcreen_github_io.png">
         <img src="../visuals/imgs/badge_git.png">
-        <img src="../visuals/imgs/badge_github.png">
-        <img src="../visuals/imgs/badge_apple.gif">
-    
-        <img src="../visuals/imgs/badge_neocities.png">
         <img src="../visuals/imgs/badge_honeocities.png">
-        <img src="../visuals/imgs/badge_intellect.gif" style="width: 88px; height: 31px;">
-        <img src="../visuals/imgs/badge_html.png">
+        <img src="../visuals/imgs/badge_apple.gif">
       </div>
+    
+    
     </div>
-  </main>
+  </main> 
     `;
   }
+}
+/*THEME SWITCHER ALPHA TEST
+    <button onclick="setTheme('../visuals/themes/style.css')">Light</button>
+    <button onclick="setTheme('../visuals/themes/dark.css')">Dark</button>
+    <button onclick="setTheme('visuals/themes/classic.css')">Classic</button>
+*/
+
+//theme switcher
+function setTheme(file) {
+    document.getElementById("theme").setAttribute("href", file);
 }
 
 customElements.define("n-avbar", Navbar);

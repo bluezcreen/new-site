@@ -29,6 +29,13 @@
       gap: 20px;
   }
   .dtc { flex: 1; }
+  
+  .array { /*for the cards on the tunes page*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+  }
 }
 
 /*font*/
@@ -48,7 +55,7 @@ body {
   font-family: var(--font2);
   background-color: var(--blk);
   color: var(--text) !important;
-  background-image: radial-gradient(var(--prim) 1px, transparent 0);
+  background-image: radial-gradient(var(--seco3) 1px, transparent 0);
   background-size: 5px 5px;
   
   padding: 0;
@@ -86,6 +93,22 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.sbar {
+  font-family: var(--font1);
+  background-color: var(--seco);
+  filter: drop-shadow(8px 8px 0px var(--prim));
+  border-radius: 2px;
+  color: var(--tert);
+  
+  padding: 12px;
+  font-size: 1.1rem;
+  text-align: center;
+  
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .wcontent {

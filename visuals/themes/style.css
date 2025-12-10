@@ -64,6 +64,10 @@ a {
   font-size: 0.9rem;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /*custom elements*/
 .content {
   padding: 80px 25px 25px 25px;
@@ -181,21 +185,20 @@ p-anel {
 .navb {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
 
   background-color: var(--prim);
   color: var(--seco);
   border-bottom: 2px solid var(--seco);
   font-family: var(--font1);
-
-  padding: 10px;
-  width: 100%;
-  
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  z-index: 999;
 }
 
 .navb a {
@@ -234,6 +237,11 @@ n-avbar {
   max-width: 367px;
 }
 
+#clock {
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
 .dr1 {
   position: relative;
   display: inline-block;
@@ -254,7 +262,7 @@ n-avbar {
   position: absolute;
   background-color: var(--prim);
   color: var(--seco) !important;
-  min-width: 180px;
+  min-width: 15rem;
   border-radius: 2px;
   font-size: 1rem;
   

@@ -30,6 +30,13 @@
       gap: 20px;
   }
   .dtc { flex: 1; }
+  
+  .array { /*for the cards on the tunes page*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+  }
 }
 
 /*desktop*/
@@ -59,7 +66,7 @@
 /*core elements*/
 body {
   font-family: var(--font2);
-  background-color: var(--bg);
+  background-image: url("../imgs/classicbg.png");
   
   padding: 0;
   margin: 0;
@@ -91,7 +98,7 @@ p-anel {
 }
 
 .wbar {
-  background: var(--gry);
+  background: var(--tert);
   color: var(--prim);
   
   border-top: 2px solid var(--seco);
@@ -109,6 +116,26 @@ p-anel {
   font-family: "Chicago";
   font-size: 1.1rem;
   text-align: center;
+}
+
+.sbar {
+  font-family: var(--font1);
+  background-color: var(--tert);
+  
+  border-top: 2px solid var(--seco);
+  border-left: 2px solid var(--seco);
+  border-right: 2px solid var(--prim);
+  border-bottom: 2px solid var(--prim);
+  outline: 1px solid var(--prim);
+  color: var(--prim);
+  
+  padding: 12px;
+  font-size: 1.1rem;
+  text-align: center;
+  
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .wbars {
